@@ -1,0 +1,30 @@
+{
+  "name": "friend_finder",
+  "version": "1.0.0",
+  "description": "Friend Finder App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveLaid/FriendFinder.git"
+  },
+  "keywords": [
+    "Friend",
+    "Finder",
+    "App"
+  ],
+  "author": "David Laidlaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaveLaid/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/DaveLaid/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  }
+}
