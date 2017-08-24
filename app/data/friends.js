@@ -1,3 +1,7 @@
+
+// require("./app/routing/apiRoutes")(app);
+
+
 // Friends data (DATA)
 // =============================================================
 var friends = [{
@@ -18,4 +22,12 @@ var friends = [{
 }];
 
 
-var totalDifference;
+// https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAlOAAAAJDNkZGY1MTg1LWNjMDMtNDJjOC1hMzU1LTdkMTQzNjRjYTVlNg.jpg
+
+
+
+
+exports.friends = friends;
+
+
+

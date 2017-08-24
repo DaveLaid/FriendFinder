@@ -8,12 +8,13 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+
 <!-- Font Awesome Glyphicons -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 <!-- Chosen -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
 
 </head>
 <body cz-shortcut-listen="true" style="">
@@ -209,6 +210,7 @@
 		        isValid = false;
 		  });
 
+		  $('.chosen-select').chosen();
 		  $('.chosen-select').each(function() {
 
 		  	if( $(this).val() === "")
@@ -221,7 +223,7 @@
 		if (validateForm() == true)
 		{
 			// Create an object for the user's data
-	    	var userData = {
+	    	var friends = {
 	    		name: $("#name").val(),
 	    		photo: $("#photo").val(),
 	    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
@@ -232,7 +234,7 @@
 	    	var currentURL = window.location.origin;
 
 	    	// AJAX post the data to the friends API. 
-	    	$.post(currentURL + "/api/friends", userData, function(data){
+	    	$.post(currentURL + "/api/friends", friends, function(data){
 
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
 	    		$("#matchName").text(data.name);
@@ -254,5 +256,6 @@
 
   </script>
 
-
-</body></html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+</body>
+</html>
