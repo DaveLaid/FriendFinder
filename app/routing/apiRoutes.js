@@ -41,11 +41,13 @@ app.post("/api/new", function(req, res) {
   //Array of captured scores from new User (used to compare against other Friends)
   var newScore = newFriend.scores;
 
-  //LOGIC TO CHANGE NEGATIVE NUMBER TO A POSITIVE:
-  var x = 10;
-  x -= 15;
-  x = Math.abs(x);
-  document.getElementById("demo").innerHTML = x;
+  // var
+
+  // //LOGIC TO CHANGE NEGATIVE NUMBER TO A POSITIVE:
+  // var x = 10;
+  // x -= 15;
+  // x = Math.abs(x);
+  // document.getElementById("demo").innerHTML = x;
 
 
   //LOGIC TO COMPARE ARRAYS:

@@ -24,7 +24,6 @@
   "homepage": "https://github.com/DaveLaid/FriendFinder#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "chosen": "0.0.2",
     "chosen-js": "^1.7.0",
     "express": "^4.15.4",
     "font-awesome": "^4.7.0",
