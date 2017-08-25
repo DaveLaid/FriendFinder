@@ -40,14 +40,59 @@ app.post("/api/new", function(req, res) {
 
   //Array of captured scores from new User (used to compare against other Friends)
   var newScore = newFriend.scores;
+  //Total SUM of array of numbers in newScore, captured in for loop below.
+  var newTotal = 0;
 
-  // var
+  for (var i = 0; i < newScore.length; i++) {
+    newTotal += parseInt(newScore[i]);
+  }
+
+  console.log("NEW SCORE: " + newScore);
+  console.log("NEW USER TOTAL: " + newTotal );
+
+  
+    
+
+//
+var result;
+var allUserTotals = [];
+
+  for (var i = 0; i < friends.length; i++) {
+    // friends[i]
+    // console.log(friends[i]);
+    // console.log("Name: " + friends[i].name);
+    // console.log("Photo: " + friends[i].photo);
+    // console.log("TOTAL Scores: " + friends[i].scores)
+
+    // allUserTotals = 
+
+    // if (){
+    //   result = Math.min.apply(null, newScore);
+
+    // }
+  }
+
+  var result = newTotal;
+  var oldScores = [];
+  var oldTotals = 0;
+  var totalDifference;
 
   // //LOGIC TO CHANGE NEGATIVE NUMBER TO A POSITIVE:
+  for (var i = 0; i < friends.length; i++) {
+    oldScores = friends[i].scores;
+    oldTotals += parseInt(oldScores[i]);
   // var x = 10;
   // x -= 15;
+  result -= oldTotals;
   // x = Math.abs(x);
+  result = Math.abs(result);
   // document.getElementById("demo").innerHTML = x;
+
+  }
+  
+  console.log("Old Scores: " + oldScores);
+  console.log("Old Totals: " + oldTotals);
+  console.log("RESULT PLEASE WORK!: " + result);
 
 
   //LOGIC TO COMPARE ARRAYS:
@@ -62,26 +107,12 @@ app.post("/api/new", function(req, res) {
 // }
 
 
-  var totalDifference;
+  
 
 
   friends.push(newFriend);
 
   res.json(newFriend);
 });
-
-
-
-  // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
-
-  // app.post("/api/data/clear", function() {
-  //   // Empty out the arrays of data
-  //   tableData = [];
-  //   waitListData = [];
-
-  //   console.log(tableData);
-  // });
 
 };
